@@ -12,10 +12,10 @@ import MenuMobile from "./MenuMobile";
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showCatMenu, setShowCatMenu] = useState(false);
+
+  // Navber scroll start
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
-  console.log("last:", lastScrollY);
-  console.log("window:", window.scrollY);
 
   const controlNavber = () => {
     if (window.scrollY > 200) {
@@ -29,6 +29,7 @@ const Header = () => {
     }
     setLastScrollY(window.scrollY);
   };
+  // Navber scroll end
 
   useEffect(() => {
     window.addEventListener("scroll", controlNavber);
